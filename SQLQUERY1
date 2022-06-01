@@ -1,0 +1,9 @@
+create table CLIENT_MASTER2(
+Client_No varchar2(6) PRIMARY KEY CHECK(Client_No LIKE 'C%'),
+Name varchar2(20) not null,
+CITY varchar2(20)CHECK (CITY IN('DELHI','MUMBAI','CHENNAI')),
+Pincode number(6),
+State varchar2(20),
+BALDUE number(10,2),
+Email varchar2(30) UNIQUE
+);
