@@ -1,0 +1,10 @@
+CREATE TABLE PRODUCT_MASTER1(
+Product_No Varchar2(6) PRIMARY KEY CHECK(PrODUCT_No LIKE 'P%'),
+Name Varchar2(20) NOT NULL,
+UnitMeasure Varchar2(10) NOT NULL,
+QtyOnHand Number(8) NOT NULL, 
+ReorderLevel Number(8) NOT NULL,
+SellPrice Number(8,2) NOT NULL CHECK(SellPrice > 0),
+CostPrice Number(8,2) NOT NULL CHECK(CostPrice > 0),
+CONSTRAINT CHK1 CHECK(ReorderLevel < QtyOnHand)
+);
