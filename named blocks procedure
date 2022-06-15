@@ -1,0 +1,24 @@
+CREATE TABLE DEPT11(
+dno number(3),
+dname varchar2(20),
+dloc varchar2(20));
+																																																																		CREATE OR REPLACE PROCEDURE AddDeptRecord1
+	(dno IN number(3),dname IN varchar2(20),dloc IN varchar(20))	
+	AS
+	BEGIN
+	INSERT INTO DEPT11 VALUES(dno,dname,dloc);
+	END;
+	DECLARE
+	dno number(3);
+	dname varchar2(20);
+	dloc varhar2(20);
+	BEGIN
+	dno:=3;
+	dname:='MCA';
+	dloc:='A block';
+	AddDeptRecord1(dno,dname,dloc);
+	END;
+	SELECT * from DEPT11;
+	
+	
+									
