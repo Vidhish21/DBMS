@@ -1,0 +1,20 @@
+DECLARE
+total_rows number(2);
+BEGIN  
+   UPDATE  customers1 
+   SET salary = salary + 5000;  
+   IF sql%notfound THEN  
+      dbms_output.put_line('no customers updated');  
+   ELSIF sql%found THEN  
+      total_rows := sql%rowcount;  
+      dbms_output.put_line( total_rows || ' customers updated ');  
+   END IF;   
+END;  
+create table customers1(
+name varchar2(10),
+id number(10),
+salary number(10));
+INSERT INTO CUSTOMERS1 VALUES('AVADH',1,20000);
+INSERT INTO CUSTOMERS1 VALUES('ABHAY',2,30000);
+SELECT* FROM CUSTOMERS1;
+
