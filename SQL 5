@@ -1,0 +1,9 @@
+UPDATE student1
+SET grade="O"
+WHERE grade="A";
+SELECT * FROM student1;
+
+DELETE FROM student1
+WHERE marks<33;
+SELECT * FROM student1;
+
