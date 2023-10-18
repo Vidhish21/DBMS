@@ -1,0 +1,31 @@
+/*LEFT EXCLUSIVE JOIN*/
+/*SELECT * 
+FROM student as s
+LEFT JOIN course as c
+ON s.id=c.id
+WHERE c.id IS NULL;
+
+/*RIGHT EXCLUSIVE JOIN
+SELECT * 
+FROM student as s
+RIGHT JOIN course as c
+ON s.id=c.id
+WHERE s.id IS NULL;
+/*FULL EXCLUSIVE JOIN
+*/
+CREATE TABLE employee (
+id INT PRIMARY KEY,
+name VARCHAR(50),
+manager_id INT
+);
+INSERT INTO employee VALUES(101, "adam", 103);
+INSERT INTO employee VALUES(102, "bob", 104);
+INSERT INTO employee VALUES(103, "casey", null);
+INSERT INTO employee VALUES(104, "donald", 103);
+SELECT * FROM employee;
+/* SELF JOIN*/
+SELECT a.name as manager_name,b.name
+FROM employee as a 
+JOIN employee as b 
+ON a.id = b.manager_id;
+
