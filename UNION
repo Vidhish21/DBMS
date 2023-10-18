@@ -1,0 +1,19 @@
+/*UNION */
+CREATE TABLE employee (
+id INT PRIMARY KEY,
+name VARCHAR(50),
+manager_id INT
+);
+INSERT INTO employee VALUES(101, "adam", 103);
+INSERT INTO employee VALUES(102, "bob", 104);
+INSERT INTO employee VALUES(103, "casey", null);
+INSERT INTO employee VALUES(104, "donald", 103);
+INSERT INTO employee VALUES(105, "donald", null);
+INSERT INTO employee VALUES(106, "vidhi", 103);
+SELECT * FROM employee;
+SELECT name FROM employee
+union 
+SELECT name FROM employee;*/
+SELECT name FROM employee
+union all
+SELECT name FROM employee;
